@@ -1,18 +1,21 @@
 import unittest
-from main import arithmetic_sum
+from app import arithmetic_sum
 
 class TestArithmeticSum(unittest.TestCase):
-    def test_zero_members(self):
-        self.assertEqual(arithmetic_sum(0), 0)
+    def test_arithmetic_sum_1(self):
+        self.assertEqual(arithmetic_sum(5), 50)  # Перевірка для 5 членів прогресії
 
-    def test_one_member(self):
-        self.assertEqual(arithmetic_sum(1), 4)
+    def test_arithmetic_sum_2(self):
+        self.assertEqual(arithmetic_sum(0), 0)   # Нуль елементів
 
-    def test_multiple_members(self):
-        self.assertEqual(arithmetic_sum(5), 55)  # 4 + 7 + 10 + 13 + 16 = 55
+    def test_arithmetic_sum_3(self):
+        self.assertEqual(arithmetic_sum(1), 4)   # Один елемент, сума = 4
 
-    def test_negative_input(self):
-        self.assertEqual(arithmetic_sum(-5), 0)
+    def test_arithmetic_sum_4(self):
+        self.assertEqual(arithmetic_sum(3), 21)  # 4 + 7 + 10 = 21
+
+    def test_arithmetic_sum_negative(self):
+        self.assertEqual(arithmetic_sum(-3), 0)  # Перевірка для від'ємного числа, очікується 0
 
 if __name__ == "__main__":
     unittest.main()
