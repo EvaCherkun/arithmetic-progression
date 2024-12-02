@@ -17,5 +17,4 @@ class TestArithmeticSum(unittest.TestCase):
     def test_arithmetic_sum_negative(self):
         self.assertEqual(arithmetic_sum(-3), 0)  # Перевірка для від'ємного числа, очікується 0
 
-if __name__ == "__main__":
-    unittest.main()
+
